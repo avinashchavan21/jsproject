@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .hide{
+            display: none;
+        }
+        .box
+        {
+            border: 2px solid black;
+        }
+        .card{
+            width: 200px;
+            height: 250px;
+            border: 2px solid black;
+        }
+        .blur{
+            filter: blur(2px);
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+    <button onclick="back()" class="hide">Back</button>  
+    <h1 class="first-heading">Task <span class="first-heading2">List</span></h1>
+    <p id="notask">No Items in the todo list</p>
+    <button onclick="showAddTask()" id="button1">Add Task</button>
+    <div id="cardcontainer"></div>
+    <div id="singleCard" class="hide"></div>
+    </div>
+    <!-- add task popup -->
+    <div class="box hide" id="addtaskpopup">
+        <h3>Task Name</h3>
+        <input type="text" id="cardname">
+        <button onclick="addCard()">Add</button>
+        <button onclick="hideAddTask()">Close</button>
+    </div>
+    <div id="addItemPopup" class="box hide">
+     
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
